@@ -50,4 +50,13 @@ describe('Dealership') do
     end
   end
 
+  describe('#add_car') do
+    it('creates a new car and adds it to the dealership inventory') do
+      test_dealership = Dealership.new('Marr Motors', 'Seattle', 'WA')
+      test_car = Car.new('Toyota', 'Camry', 1999)
+      test_dealership.add_car(test_car)
+      expect(test_dealership.cars().include?(test_car)).to(eq(true))
+    end
+  end
+
 end
