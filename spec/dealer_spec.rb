@@ -32,6 +32,15 @@ describe('Car') do
     end
   end
 
+  describe('.find_car') do
+    it('returns a car from @@cars based on car ID number') do
+      test_car_1 = Car.new('Lamborghini','Murcielago',2006)
+      test_car_2 = Car.new('Ruf','GT3',2004)
+      test_car_3 = Car.new('BMW','M3 evo III', 1991)
+      expect(Car.find_car(3)).to(eq(test_car_3))
+    end
+  end
+
 end
 
 describe('Dealership') do
