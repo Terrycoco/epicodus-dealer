@@ -14,7 +14,7 @@ describe('dealer test path', {:type => :feature}) do
 
  it('serves the index page which will ask the user to input a dealership') do
    visit('/')
-   fill_in('name', :with => 'Terry')
+   fill_in('name', :with => 'Terrys Cars')
    fill_in('city', :with => 'New York')
    fill_in('state', :with => 'NY')
    click_button('Add')
@@ -53,7 +53,7 @@ describe('dealer test path', {:type => :feature}) do
    fill_in('model', :with => 'Celica')
    fill_in('year', :with => 1999)
    click_button('Add car')
-   expect(page).to have_content('Celica') 
+   expect(page).to have_content('Celica')
    end
 
 end
