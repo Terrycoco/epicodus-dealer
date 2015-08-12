@@ -4,6 +4,10 @@ require('pry')
 
 describe('Car') do
 
+  before() do
+    Car.clear()
+  end
+
   describe('#initialize') do
     it('create a new car with properties make, model, year, id') do
       test_car = Car.new('Toyota', 'Celica', 2000)
