@@ -19,7 +19,16 @@ describe('Car') do
     it('generates a unique number based on the number of cars already initialized') do
       Car.new('Ferrari', 'LaFerrari', 2014)
       test_car = Car.new('Mercedes', 'S55 AMG', 2016)
+
       expect(test_car.id()).to(eq(2))
+    end
+  end
+
+  describe('.save') do
+    it('saves a vehicle to a collection') do
+      test_car = Car.new('Ford','Ranger', 2001)
+      test_car.save()
+      expect(Car.all().include?(test_car)).to(eq(true))
     end
   end
 

@@ -35,4 +35,9 @@ class Car
     @@counter = 0
     @@cars = []
   end
+
+  define_singleton_method(:all) do
+    @@cars
+  end
+
 end
