@@ -68,4 +68,12 @@ describe('Dealership') do
     end
   end
 
+  describe('.save') do
+    it('adds a given dealership to dealerships collection') do
+      test_dealership = Dealership.new('Terry Used Cars', 'Walla Walla', 'WA')
+      test_dealership.save()
+      expect(Dealership.all().include?(test_dealership)).to(eq(true))
+    end
+  end
+
 end
