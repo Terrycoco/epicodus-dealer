@@ -1,5 +1,6 @@
 require('rspec')
 require('car')
+require('dealership')
 require('pry')
 
 describe('Car') do
