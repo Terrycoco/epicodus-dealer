@@ -33,3 +33,20 @@ describe('Car') do
   end
 
 end
+
+describe('Dealership') do
+
+  before() do
+    Dealership.clear()
+  end
+
+  describe('#initialize') do
+    it('creates a new dealership with the properties name, city, state') do
+      test_dealership = Dealership.new('Powell Motors','Portland','OR')
+      expect(test_dealership.name()).to(eq('Powell Motors'))
+      expect(test_dealership.city()).to(eq('Portland'))
+      expect(test_dealership.state()).to(eq('OR'))
+    end
+  end
+
+end
