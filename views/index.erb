@@ -1,0 +1,20 @@
+<h1>Here are all the car dealerships you own:</h1>
+
+<ul>
+  <% @dealerships.each() do |dealership| %>
+  <li><%= dealership.name() %></li>
+  <% end %>
+</ul>
+<br>
+<form action="/new_dealer" method="post">
+  <label for="name">New Dealership Name</label>
+  <br><input type="text" name="name">
+  <br>
+  <label for="city">City</label>
+  <br><input type="text" name="city">
+  <br>
+  <label for="state">State</label>
+  <br><input type="text" name="state">
+  <br><br><br>
+  <button name="button" type="submit">Add</button>
+</form>
