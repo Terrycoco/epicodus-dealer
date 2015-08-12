@@ -1,0 +1,22 @@
+<h1><%= @dealership.name %></h1>
+<h2><%= @dealership.city %>, <%= @dealership.state %></h2>
+<br>
+<h2>Here is the inventory of vehicles:</h2>
+<ul>
+  <% @dealership.cars.each() do |car| %>
+    <li> <%= car.year() %> <%= car.make() %> <%= car.model() %></li>
+    <% end %>
+</ul>
+
+<form action="/dealership/<%= @dealership.name %>/new_car" method="post">
+  <label for="make">New Car Make</label><br>
+  <input type="text" name="make"><br>
+  <label for="model">Model</label><br>
+  <input type="text" name="model"><br>
+  <label for="year">Year</label><br>
+  <input type="text" name="year"><br>
+  <br>
+  <button name="button" type="submit">Add car</button>
+
+
+</form>

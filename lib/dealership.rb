@@ -42,4 +42,12 @@ class Dealership
     @@dealerships
   end
 
+  define_singleton_method(:find) do |name|
+    @@dealerships.each() do |dealership|
+      if dealership.name == name
+        return dealership
+      end
+    end
+  end
+
 end
