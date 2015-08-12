@@ -8,7 +8,7 @@ class Car
     @model = model
     @year = year
     @id = Car.create_id()
-
+    self.save()
   end
 
   define_method(:make) do

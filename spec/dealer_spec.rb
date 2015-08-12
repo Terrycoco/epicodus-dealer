@@ -28,7 +28,7 @@ describe('Car') do
   describe('.save') do
     it('saves a vehicle to a collection') do
       test_car = Car.new('Ford','Ranger', 2001)
-      test_car.save()
+      # test_car.save()
       expect(Car.all().include?(test_car)).to(eq(true))
     end
   end
@@ -57,7 +57,6 @@ describe('Dealership') do
       test_car = Car.new('Toyota', 'Camry', 1999)
       test_dealership.add_car(test_car)
       expect(test_dealership.cars().include?(test_car)).to(eq(true))
-      binding.pry
     end
   end
 
