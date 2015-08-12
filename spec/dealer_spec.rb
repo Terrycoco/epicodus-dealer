@@ -39,6 +39,7 @@ describe('Dealership') do
 
   before() do
     Dealership.clear()
+    Car.clear()
   end
 
   describe('#initialize') do
@@ -56,6 +57,7 @@ describe('Dealership') do
       test_car = Car.new('Toyota', 'Camry', 1999)
       test_dealership.add_car(test_car)
       expect(test_dealership.cars().include?(test_car)).to(eq(true))
+      binding.pry
     end
   end
 
