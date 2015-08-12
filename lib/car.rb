@@ -26,6 +26,10 @@ class Car
     @id
   end
 
+  define_method(:save) do
+    @@cars.push(self)
+  end
+
 #class methods
   define_singleton_method(:create_id) do
     @@counter += 1
