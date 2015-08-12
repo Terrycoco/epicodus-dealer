@@ -11,7 +11,7 @@ describe('Car') do
     end
   end
 
-  describe(:create_id) do
+  describe('.create_id') do
     it('generates a unique number based on the number of cars already initialized') do
       Car.new('Ferrari', 'LaFerrari', 2014)
       test_car = Car.new('Mercedes', 'S55 AMG', 2016)
