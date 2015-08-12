@@ -45,4 +45,14 @@ class Car
     @@cars
   end
 
+  define_singleton_method(:find_car) do |id|
+    @@cars.each() do |car|
+      if car.id() == id
+        return car
+      else
+        "Not found"
+      end
+    end
+  end
+
 end
